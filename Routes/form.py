@@ -39,7 +39,7 @@ def submit_form():
             if not form_data.get(field):
                 return jsonify({"success": False, "error": f"Missing field: {field}"}), 422
 
-    now = datetime.datetime.utcnow()
+    now = datetime.datetime.utcnow().isoformat()
     submission_id = str(uuid.uuid4())
     user_id = decode_token(token)
 
