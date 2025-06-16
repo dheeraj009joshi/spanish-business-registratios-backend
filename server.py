@@ -51,4 +51,4 @@ app.register_blueprint(submissions_bp,url_prefix='/api/submissions' )
 if __name__ == "__main__":
     # print("Server is running on http://127.0.0.1:5000")  # Debugging
     # app.run(debug=True, port=5000)
-    app.run(host="0.0.0.0",debug=True, port=5000)
+    app.run(host="0.0.0.0",debug=True, port=2000)
