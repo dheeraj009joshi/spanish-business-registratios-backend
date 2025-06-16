@@ -21,7 +21,7 @@ app.config['MAIL_PORT'] = 465  # ✅ Use 465 for SSL (or 587 for TLS)
 app.config['MAIL_USE_TLS'] = False  # ✅ Set False for SSL
 app.config['MAIL_USE_SSL'] = True  # ✅ Set True for SSL
 app.config['MAIL_USERNAME'] = 'business@registrarnegocio.com'  # ✅ Replace with your Hostinger email
-app.config['MAIL_PASSWORD'] = 'Dheeraj@2006'  # ✅ Use your actual email password
+app.config['MAIL_PASSWORD'] = '9#!X]beF'  # ✅ Use your actual email password
 app.config['MAIL_DEFAULT_SENDER'] = 'business@registrarnegocio.com'  # ✅ Set default sender
 
 # Initialize Mail
