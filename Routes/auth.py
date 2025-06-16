@@ -114,10 +114,8 @@ def request_reset():
         return jsonify({'success': False, 'error': 'Account not  exists'}), 400
 
     token = serializer.dumps(email, salt='password-reset-salt')
-    reset_url = url_for('auth.reset_password', token=token, _external=True)
-    # This should be the full frontend URL, not a Flask route
-    reset_url = f"https://georgia.registrarnegocio.com/reset?token={token}"
-
+    # reset_url = url_for('auth.reset_password', token=token, _external=True)
+    reset_url=f"https://georgia.registrarnegocio.com/auth/reset-password/?token={token}"
     msg = Message("Password Reset Request", sender="studies@tikuntech.com", recipients=[email])
     msg.body = f"Click here to reset your password: {reset_url}"
     mail.send(msg)
