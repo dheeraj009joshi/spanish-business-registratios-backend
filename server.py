@@ -20,9 +20,9 @@ app.config['MAIL_SERVER'] = 'smtp.hostinger.com'  # ✅ Use Hostinger's SMTP
 app.config['MAIL_PORT'] = 465  # ✅ Use 465 for SSL (or 587 for TLS)
 app.config['MAIL_USE_TLS'] = False  # ✅ Set False for SSL
 app.config['MAIL_USE_SSL'] = True  # ✅ Set True for SSL
-app.config['MAIL_USERNAME'] = 'studies@tikuntech.com'  # ✅ Replace with your Hostinger email
-app.config['MAIL_PASSWORD'] = 'Studies@1234'  # ✅ Use your actual email password
-app.config['MAIL_DEFAULT_SENDER'] = 'studies@tikuntech.com'  # ✅ Set default sender
+app.config['MAIL_USERNAME'] = 'business@registrarnegocio.com'  # ✅ Replace with your Hostinger email
+app.config['MAIL_PASSWORD'] = 'Dheeraj@2006'  # ✅ Use your actual email password
+app.config['MAIL_DEFAULT_SENDER'] = 'business@registrarnegocio.com'  # ✅ Set default sender
 
 # Initialize Mail
 mail.init_app(app)
@@ -51,4 +51,4 @@ app.register_blueprint(submissions_bp,url_prefix='/api/submissions' )
 if __name__ == "__main__":
     # print("Server is running on http://127.0.0.1:5000")  # Debugging
     # app.run(debug=True, port=5000)
-    app.run(host="0.0.0.0",debug=True, port=1000)
+    app.run(host="0.0.0.0",debug=True, port=5000)
