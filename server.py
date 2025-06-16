@@ -27,7 +27,7 @@ app.config['MAIL_DEFAULT_SENDER'] = 'business@registrarnegocio.com'  # ✅ Set d
 # Initialize Mail
 mail.init_app(app)
 
-CORS(app, resources={r"/*": {"origins": ["http://localhost:1000","*"],
+CORS(app, resources={r"/*": {"origins": ["http://localhost:1000","https://georgia.registrarnegocio.com","*"],
                              "methods": ["GET","PUT", "POST", "OPTIONS","DELETE"],
                              "supports_credentials": True}})
 
