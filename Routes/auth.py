@@ -199,9 +199,10 @@ def google_sign():
 # === Google Callback Route ===
 @auth_bp.route('googleauth/callback')
 def google_callback():
+    
     code = request.args.get("code")
     mode = session.get("mode", "login")
-
+    print(code)
     if not code:
         return redirect(f"{FRONTEND_CALLBACK}?success=false&error=Missing+authorization+code")
 
