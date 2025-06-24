@@ -31,7 +31,8 @@ CORS(app, resources={
     r"/*": {
         "origins": [
             "http://localhost:1000",
-            "https://georgia.registrarnegocio.com"
+            "https://georgia.registrarnegocio.com",
+            "https://registrarnegocio.com"
         ],
         "methods": ["GET", "POST", "PUT", "OPTIONS", "DELETE"],
         "supports_credentials": True
