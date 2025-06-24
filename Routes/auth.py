@@ -191,6 +191,9 @@ def google_sign():
             "prompt": "consent",
         })
     )
+    print("Redirecting to Google:", oauth_url)
+    print("Using redirect_uri:", REDIRECT_URI)
+
     return redirect(oauth_url)
 
 # === Google Callback Route ===
