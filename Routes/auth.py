@@ -250,7 +250,8 @@ def google_callback():
         "lastName": user.get("lastName"),
         "createdAt": user["createdAt"].isoformat()
     }
-
+    print("token :-",token)
+    print("user data :-",user_data)
     return redirect(
         f"{FRONTEND_CALLBACK}?success=true"
         f"&user={urllib.parse.quote(json.dumps(user_data))}"
