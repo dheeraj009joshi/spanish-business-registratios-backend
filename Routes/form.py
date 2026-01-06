@@ -7,7 +7,7 @@ import uuid
 from functions import protected, send_submission_email
 
 forms_bp = Blueprint('forms', __name__)
-@protected
+
 @forms_bp.route('/submit', methods=['POST'])
 def submit_form():
     if request.method == "OPTIONS":
@@ -51,11 +51,16 @@ def submit_form():
         "status": "pending",                     # default
         "submittedAt": now,
         "lastUpdated": now,
-        "totalAmount": 0,                        # default
+        "totalAmount": form_data.get("totalAmount", 0),  # Get from form data
         "notes": "",                             # default
         "documents": [],                         # default
         "timeline": []                           # default
-    }
-)
+    })
 
-    return jsonify({"success": True, "message": "Form submitted"})
+    return jsonify({
+        "success": True, 
+        "message": "Form submitted",
+        "data": {
+            "submissionId": submission_id
+        }
+    })
