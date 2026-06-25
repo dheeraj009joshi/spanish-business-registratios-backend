@@ -141,7 +141,7 @@ def request_reset():
 
     token = serializer.dumps(email, salt='password-reset-salt')
     # reset_url = url_for('auth.reset_password', token=token, _external=True)
-    reset_url=f"https://georgia.registrarnegocio.com/auth/reset-password/?token={token}"
+    reset_url=f"https://hispanoauto.com/auth/reset-password/?token={token}"
     msg = Message("Password Reset Request", sender="business@registrarnegocio.com", recipients=[email])
     msg.body = f"Click here to reset your password: {reset_url}"
     mail.send(msg)
